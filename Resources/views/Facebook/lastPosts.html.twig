@@ -2,7 +2,7 @@
     {% if posts %}
         <ul>
         {% for post in posts %}
-            {{ post }}
+            {{ post.message }}
         {% endfor %}
         </ul>
     {% else %}
