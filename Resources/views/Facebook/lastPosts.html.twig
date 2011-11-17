@@ -1,0 +1,11 @@
+<section class="iampersistent-last-posts">
+    {% if posts %}
+        <ul>
+        {% for post in posts %}
+            {{ post }}
+        {% endfor %}
+        </ul>
+    {% else %}
+        No updated
+    {% endif %}
+</section>
