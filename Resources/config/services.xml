@@ -9,7 +9,7 @@
     </parameters>
 
     <services>
-        <service id="iampersistent_facebook_graph_api" class="%iampersistent_facebook_graph.api.class%">
+        <service id="iampersistent.facebook_graph_api" class="%iampersistent_facebook_graph.api.class%">
             <argument type="service" id="fos_facebook.api" />
         </service>
     </services>

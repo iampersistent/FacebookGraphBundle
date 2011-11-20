@@ -9,13 +9,13 @@ class FacebookController extends Controller
 {
     public function lastEventsAction($facebookId, $limit = 10, $age = null)
     {
-        $graphApi = $this->get('iampersistent_facebook_graph_api');
+        $graphApi = $this->get('iampersistent.facebook_graph_api');
 
-        $posts = $graphApi->fetchEvents($facebookId);
+        $events = $graphApi->fetchEvents($facebookId);
 
         $response = $this->render('IamPersistentFacebookGraphBundle:Facebook:lastEvents.html.twig', array(
             'facebookId' => $facebookId,
-            'posts' => $posts,
+            'events' => $events,
         ));
 
         if ($age) {
@@ -27,13 +27,13 @@ class FacebookController extends Controller
 
     public function lastPostsAction($facebookId, $limit = 10, $age = null)
     {
-        $graphApi = $this->get('iampersistent_facebook_graph_api');
+        $graphApi = $this->get('iampersistent.facebook_graph_api');
 
-        $events = $graphApi->fetchPosts($facebookId);
+        $posts = $graphApi->fetchPosts($facebookId);
 
         $response = $this->render('IamPersistentFacebookGraphBundle:Facebook:lastPosts.html.twig', array(
             'facebookId' => $facebookId,
-            'events' => $events,
+            'posts' => $posts,
         ));
 
         if ($age) {
