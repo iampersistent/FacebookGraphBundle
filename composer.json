@@ -1,5 +1,5 @@
 {
-    "name": "IamPersistent/facebook-graph-bundle",
+    "name": "iampersistent/facebook-graph-bundle",
     "type": "symfony-bundle",
     "description": "Symfony2 Bundle for Facebook Graph API",
     "keywords": ["facebook", "graph", "api"],
